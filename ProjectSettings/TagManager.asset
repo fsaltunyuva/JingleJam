@@ -13,8 +13,8 @@ TagManager:
   - Water
   - UI
   - Ground
+  - Camera Confiner
   - Player
-  - Collectibles
   - 
   - 
   - 
@@ -39,15 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2424153585
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
-    uniqueID: 252552567
+  - name: Foreground
+    uniqueID: 3928980359
     locked: 0
-  - name: Player
-    uniqueID: 2616581267
-    locked: 0
-  - name: Collectibles
-    uniqueID: 2112293757
+  - name: 
+    uniqueID: 760003871
     locked: 0

@@ -1,0 +1,55 @@
+Senaryo: Noeliniz, sevdiklerinizle birlikte Noel yemeğinde otururken, bir anda ortadan kayboldu! Şimdi, 
+Noelinizi bulmak ve geri getirmek için yolculuğa çıkacaksınız.
+
+Eylemler:
+
+Başlangıç ekranında, Noelinizin ortadan kaybolduğunu gösteren bir görüntü görüntülenir.
+Kullanıcı, Noelinizi bulmak amacıyla yolculuğa çıkmak için "Başla" düğmesine tıklarsa, oyun başlar.
+Kullanıcıya, yolculuğun ilerleyişini takip eden bir harita görüntülenir. 
+Harita,Noelinizi bulmak için ziyaret edilecek farklı yerleri gösterir.
+Kullanıcı, her bir yerde farklı görevleri tamamlamalıdır. Örneğin, bir yerde bir şapka giymek, 
+bir yerde bir şarkı söylemek veya bir yerde bir bulmaca çözmek gibi.
+Her görev tamamlandığında, kullanıcıya puan verilir ve haritada ilerler.
+Kullanıcı, tüm görevleri tamamladıktan sonra Noelinizi bulur ve geri getirir.
+Noel yemeğine geri dönen Noeliniz ve sevdikleriniz ile birlikte mutlu bir sona ulaşılır.
+Önerebileceğim başka bir şey de, görevleri tamamlamak için Noelinizin yolculuğu sırasında yarışırken zaman kısıtlaması eklemek olabilir.
+Böylece oyun daha zor ve eğlenceli hale gelebilir.Tür<Hyper Casual>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Senaryo: "Noel Köprüsü"
+
+Oyunun Amacı: Noel Köprüsü, bir hikaye tabanlı Hyper Casual oyunudur ve 
+oyuncunun Noelin kaçırıldığı bir dünyada yolculuk yaparak Noelin geri getirilmesine yardımcı olmasına odaklanır. 
+Oyuncu, Noelin kaçırıldığı yerden başlar ve bölümler halinde ilerler. 
+Her bölümde, oyuncu yeni zorluklarla ve düşmanlarla karşılaşır ve Noelin bulunması için ipuçları toplar. 
+Oyun, oyuncunun Noelin bulunmasını ve onu dünyaya geri getirmeyi başarmasıyla biter.
+
+Oyun Özellikleri:
+
+Oyun, bir hikaye tabanlı yapıya sahiptir ve oyuncu, Noelin kaçırıldığı yerden başlar.
+Oyuncu, yolculuğu sırasında yeni yerler keşfeder ve Noelin bulunması için ipuçları toplar.
+Oyuncu, yolculuğu sırasında yeni düşmanlarla ve zorluklarla karşılaşır.
+Oyuncu, yolculuğu sırasında yeni eşyalar ve yetenekler keşfedebilir ve bunları kullanarak düşmanları yendiğinde puan kazanabilir.
+Oyun, oyuncunun Noelin bulunmasını ve onu dünyaya geri getirmeyi başarmasıyla biter.
+
+Oyunun Hikayesi:
+Noelin kaçırıldığı bir dünyada, oyuncu Noelin bulunmasına yardımcı olmak için yolculuğa çıkar. 
+Oyuncu, Noelin kaçırıldığı yerden başlar ve bölümler halinde ilerler. Her bölümde, 
+oyuncu yeni zorluklarla ve düşmanlarla karşılaşır ve Noelin bulunması için ipuçları toplar.
+
+Yolculuğu sırasında, oyuncu Noel Köprüsü adı verilen bir yere ulaşır. 
+Köprü, Noelin bulunmasına yardımcı olacak önemli bir ipucudur. 
+Ancak, köprüyü geçmek için oyuncunun önce birkaç bulmacayı çözmesi gerekmektedir. 
+Bulmacalar, Noelin bulunması için ipuçları içerebilir veya oyuncunun Noelin geri getirilmesine yardımcı olacak eşyaları bulmasını sağlayabilir.
+
+Oyuncu, bulmacaları çözdükten sonra Noel Köprüsünü geçer ve yolculuğuna devam eder. 
+Yolculuğu sırasında, oyuncu yeni düşmanlarla ve zorluklarla karşılaşır ve bunları yendiğinde puan kazanır. 
+Ayrıca, oyuncu yeni eşyalar ve yetenekler keşfeder ve bunları kullanarak düşmanları yendiğinde daha fazla puan kazanabilir.
+
+Oyun, oyuncunun Noelin bulunmasını ve onu dünyaya geri getirmeyi başarmasıyla biter. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+

@@ -8,6 +8,9 @@ public class ImageSC : MonoBehaviour
     public Sprite[] sprites;
     public int spt_value;
     public GameObject img;
+    public GameObject cuce; //Cüceyi silmek için
+    public bool isDialogueOver = false; //Diyalog sırasında inputu engellemek için
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -15,6 +18,8 @@ public class ImageSC : MonoBehaviour
             if (spt_value == 18)
             {
                 Destroy(img);
+                Destroy(cuce);
+                bool isDialogueOver = true;
             }
             if (spt_value < 18)
             {

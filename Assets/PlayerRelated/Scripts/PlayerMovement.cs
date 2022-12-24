@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System; //try-catch için
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,9 +15,14 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
     Vector2 startScale;
+    Vector2 startPosition;
+    
+    public GameObject image;
 
     void Start()
     {
+        image = GameObject.FindGameObjectWithTag("Image"); //Diyalogun bitip bitmediğini kontrol etmek için
+        startPosition = transform.position; //Aşağı düştükten sonra başlangıç pozisyonuna geri döndürebilmek için
         myRigidbody = GetComponent<Rigidbody2D>(); 
         myAnimator = GetComponent<Animator>();   
         myBodyCollider = GetComponent<CapsuleCollider2D>();
@@ -35,6 +41,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Run() 
     {
+        //
+        try{
+            if(image.GetComponent<ImageSC>().isDialogueOver == false){ //Diyalog bitmeden input almayı engelleme 
+                myRigidbody.velocity = new Vector2(0f,0f);
+                return;
+            }
+        }
+        catch(Exception e){}
+        //
         Vector2 playerVelocity = new Vector2 (moveInput.x * runSpeed, myRigidbody.velocity.y); //x ekseninde "verilen input*koşma hızı"nda, y ekseninde ise oyuncunun halihazırdaki y eksenindeki hızı  
         myRigidbody.velocity = playerVelocity;
 
@@ -54,7 +69,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnJump(InputValue value) {
-        Debug.Log("Jump Value pressed!");
+        //
+        try{
+            if(image.GetComponent<ImageSC>().isDialogueOver == false){ //Diyalog bitmeden input almayı engelleme
+                myRigidbody.velocity = new Vector2(0f,0f);
+                return;
+            }
+            }
+        catch(Exception e){}
+        //
+
         if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) {return;} //Sonsuz kere zıplamayı engellemek için kullanıcının ayağı yere değmediği sürece zıplamayı engelleyen satır
 
         if (value.isPressed && !myAnimator.GetBool("isJumping")) {
@@ -63,8 +87,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) //Oyuncu yere indiğinde zıplama animasyonunu durduran metod
+    private void OnTriggerEnter2D(Collider2D other) //Oyuncu yere indiğinde zıplama animasyonunu durduran ve aşağı düşmeyi kontrol eden metod
         {
+            if(other.tag == "Death Triggerer") { //Aşağı düştükten sonra başlangıç pozisyonuna geri döndürebilmek için
+                transform.position = startPosition;
+            }
+
             myAnimator.SetBool("isJumping", false);
         }
     

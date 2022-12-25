@@ -41,20 +41,28 @@ public class PlayerMovement : MonoBehaviour
 
     void Run() 
     {
+        
         //
         try{
             if(image.GetComponent<ImageSC>().isDialogueOver == false){ //Diyalog bitmeden input almayı engelleme 
                 myRigidbody.velocity = new Vector2(0f,0f);
+                GetComponent<AudioSource>().Pause();
                 return;
             }
         }
         catch(Exception e){}
-        //
+        //     
+
         Vector2 playerVelocity = new Vector2 (moveInput.x * runSpeed, myRigidbody.velocity.y); //x ekseninde "verilen input*koşma hızı"nda, y ekseninde ise oyuncunun halihazırdaki y eksenindeki hızı  
         myRigidbody.velocity = playerVelocity;
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon; //oyuncunun yatayda hızı olup olmadığını dönen boolean (42. satırda animasyon oynatımı için kullanılıyor.)
-
+        GetComponent<AudioSource>().UnPause(); 
+        if(!playerHasHorizontalSpeed){
+            GetComponent<AudioSource>().Pause();
+        }
+            
+        
         myAnimator.SetBool("isRunning", playerHasHorizontalSpeed); //Kullanıcının yatayda hızı olduğu sürece "isRunning" adlı animasyon boolean'ini true ya da false yapan satır
 
     }

@@ -28,7 +28,7 @@ public class snManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void Update()
+    public void Start()
     {
         prf = PlayerPrefs.GetFloat("SC");
         print(prf);

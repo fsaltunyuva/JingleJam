@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System; //try-catch için
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 10f; 
@@ -18,7 +18,10 @@ public class PlayerMovement : MonoBehaviour
     Vector2 startPosition;
     
     public GameObject image;
+    public GameSession gs;
+    public EndImageSC eisc;
 
+    private float gsScore;
     void Start()
     {
         image = GameObject.FindGameObjectWithTag("Image"); //Diyalogun bitip bitmediğini kontrol etmek için
@@ -31,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        gsScore = gs.GetComponent<GameSession>().score;
         Run();
         FlipSprite();
     }
@@ -41,20 +45,28 @@ public class PlayerMovement : MonoBehaviour
 
     void Run() 
     {
+        
         //
         try{
             if(image.GetComponent<ImageSC>().isDialogueOver == false){ //Diyalog bitmeden input almayı engelleme 
                 myRigidbody.velocity = new Vector2(0f,0f);
+                GetComponent<AudioSource>().Pause();
                 return;
             }
         }
         catch(Exception e){}
-        //
+        //     
+
         Vector2 playerVelocity = new Vector2 (moveInput.x * runSpeed, myRigidbody.velocity.y); //x ekseninde "verilen input*koşma hızı"nda, y ekseninde ise oyuncunun halihazırdaki y eksenindeki hızı  
         myRigidbody.velocity = playerVelocity;
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon; //oyuncunun yatayda hızı olup olmadığını dönen boolean (42. satırda animasyon oynatımı için kullanılıyor.)
-
+        GetComponent<AudioSource>().UnPause(); 
+        if(!playerHasHorizontalSpeed){
+            GetComponent<AudioSource>().Pause();
+        }
+            
+        
         myAnimator.SetBool("isRunning", playerHasHorizontalSpeed); //Kullanıcının yatayda hızı olduğu sürece "isRunning" adlı animasyon boolean'ini true ya da false yapan satır
 
     }
@@ -95,6 +107,15 @@ public class PlayerMovement : MonoBehaviour
 
             myAnimator.SetBool("isJumping", false);
         }
-    
-    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //Hakan Ekledi*
+        if (collision.tag == "Santa" && gsScore == 25)
+        {
+            eisc.EndDialogues();
+        }
+
+
+    }
+
 }

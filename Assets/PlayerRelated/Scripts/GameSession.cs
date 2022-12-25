@@ -6,7 +6,7 @@ using TMPro;
 public class GameSession : MonoBehaviour
 {
 
-    [SerializeField] int score = 0;
+    public int score = 0;
     [SerializeField] TextMeshProUGUI scoreText;
 
     // Start is called before the first frame update

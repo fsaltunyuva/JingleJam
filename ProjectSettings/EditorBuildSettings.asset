@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Noel.unity
     guid: 57844b8c6422042489fd384d34d39abf
+  - enabled: 1
+    path: Assets/Scenes/EndCutScene.unity
+    guid: b298e21dd56b73249986f49a457804c6
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9081974fcacb5114e87eeb59dc52b370, type: 2}

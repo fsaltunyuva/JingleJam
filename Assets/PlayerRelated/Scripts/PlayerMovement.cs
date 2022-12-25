@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon; //oyuncunun yatayda hızı olup olmadığını dönen boolean (42. satırda animasyon oynatımı için kullanılıyor.)
         GetComponent<AudioSource>().UnPause(); 
-        if(!playerHasHorizontalSpeed){
+        if(!playerHasHorizontalSpeed || !myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))){
             GetComponent<AudioSource>().Pause();
         }
             
@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnJump(InputValue value) {
+        
         //
         try{
             if(image.GetComponent<ImageSC>().isDialogueOver == false){ //Diyalog bitmeden input almayı engelleme

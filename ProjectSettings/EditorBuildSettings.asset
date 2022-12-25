@@ -6,7 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Earth.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3f283a1a1b1fdaf4385095b60fe1c9c5
+  - enabled: 1
+    path: Assets/Scenes/CutScene.unity
+    guid: 6c901616909643c46aec52d8484926b2
+  - enabled: 1
+    path: Assets/Scenes/Noel.unity
+    guid: 57844b8c6422042489fd384d34d39abf
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9081974fcacb5114e87eeb59dc52b370, type: 2}
